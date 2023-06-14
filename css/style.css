@@ -1,271 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
 
 *{
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color: rgb(4, 3, 3);
-    /* background-image: url(/img/bg.png); */
-    background-size:contain;
-    background-repeat: no-repeat;
-}
-
-header{
-    height: 20vh;
-    width: 100%;
-}
-
-.content{
-    height: 20vh;
+nav{
     display: flex;
     justify-content: space-around;
+    height: 5vw;
+    background-color: #f1eded;
+    box-shadow: 0  0 10px black;
+    font-family: 'Tilt Prism', cursive;
 }
 
-.balloons{
-    display: inline-grid;
-    height: 18vh;
-    justify-content:flex-start;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto;
-}
-
-.start{
-    animation: moveBallFirst 2s infinite ease-out;
-}
-.end{
-    animation: moveBallLast 2s infinite 1s ease-out;
-}
-
-.balloon .thread{
-    position: relative;
-    background-color: black;
-    height: 13.5vh;
-    width: 5px;
-    top: -1vh;
-    left: 4vh;
-}
-
-.balloon .ball{
-    position: relative;
-    height: 9vh;
-    width: 9vh;
-    background-color:blue;
-    border-radius: 50%;
-    box-shadow: 0 0 10px black;
-    top: -4vh;
-    text-align: center;
-    font-size: x-large;
-    color: wheat;
-    font-family: 'Permanent Marker', cursive;
-    box-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(31, 57, 185),
-    0 0 82px rgb(31, 57, 185),
-    0 0 92px rgb(31, 57, 185),
-    0 0 102px rgb(31, 57, 185),
-    0 0 151px rgb(31, 57, 185);
-}
-
-.switch{
-    background-color: transparent;
-    height: 10vh;
-    width: 10vh;
-    border: 4px solid grey;
-    border-radius: 50%;
+nav>p{
+    font-size: 2.5vw;
+    font-weight: 900;
     align-self: center;
-    box-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(230, 236, 33),
-    0 0 82px rgb(230, 236, 33),
-    0 0 92px rgb(230, 236, 33),
-    0 0 102px rgb(230, 236, 33),
-    0 0 151px rgb(230, 236, 33);
 }
 
-.switch:hover{
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links{
+    list-style: none;
+}
+
+.links:hover{
     cursor: pointer;
-    border-color: yellow;
+    transform: scale(1.2,1.2);
+    text-shadow: 0 0 5px rgb(124, 124, 227);
+}
+
+.links>a{
+    text-decoration: none;
+    padding: 0 2vw;
+    font-weight: 900;
+    font-size: 1.5vw;
+}
+
+
+.main-container{
+    height: calc(100vh - 5vw - 5vw);
+    display: flex;
 }
 
 .container{
-    height: calc(100vh - 20vh - 30vh);
-    /* background-color: white; */
+    position:relative;
+    align-self: center;
+    background-color: rgb(218, 233, 233);
+    border-radius: 20px 20px 20px 20px;
+    height: 80%;
+    width:80vw;
+    margin: auto;
+    box-shadow: 0 0 50px black;
 }
+
+.image{
+    position: absolute;
+    height: 23%;
+    border-radius: 50%;
+    top: -30px;
+    left: -31px;
+}
+
+.image:hover{
+    cursor: pointer;
+    transform: rotateZ(360deg) scale(1.7,1.7);
+    transition: 1s;
+}
+
+.datas{
+    display: grid;
+    /* background-color: rgb(214, 166, 166); */
+    height: 100%;
+    width:81vw;
+    grid-template-columns: 40vw 40vw;
+    grid:10px 10px;
+    overflow:auto;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+.topic{
+    align-self: center;
+}
+.topic>h1{
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Dancing Script', cursive;
+}
+
+.information>ul{
+    display: grid;
+}
+
+ul li{
+    font-size:1.3vw;
+    list-style-position: inside;
+    font-family: 'Caveat', cursive;
+}
+
+
 
 footer{
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-    width: 100vw;
-    /* background-color: black; */
-    justify-content:space-around;
-    align-items: center;
-    height: 30vh;
+    display:flex;
+    justify-content: space-around;
+    height: 5vw;
+    background-color: #f1eded;
+    box-shadow: 0  0 10px black;
+    /* border: 1px solid black; */
 }
 
-footer img{
-    width: 20vh;
-    height: 20vh;
-    border-radius: 50%;
-    box-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(31, 57, 185),
-    0 0 70px rgb(31, 57, 185),
-    0 0 80px rgb(31, 57, 185),
-    0 0 90px rgb(31, 57, 185),
-    0 0 100px rgb(31, 57, 185);
+footer>p{
+    font-size: 2.5vw;
+    align-self: center;
+    font-family: 'Comforter', cursive;
+}
+.social-links{
+    list-style: none;
+}
+.social-links>a{
+    text-decoration: none;
+    padding: 0 2vw;
+    font-weight: 900;
+    font-size: 1.5vw;
 }
 
-footer .selfContent1 p{
-    font-family: 'Caveat', cursive;
-    font-size: larger;
-    font-weight: bolder;
-    color: #fff;
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(162, 40, 158),
-    0 0 82px rgb(162, 40, 158),
-    0 0 92px rgb(162, 40, 158),
-    0 0 102px rgb(162, 40, 158),
-    0 0 151px rgb(162, 40, 158);
-}
-footer .selfContent2 p{
-    font-family: 'Caveat', cursive;
-    font-size: larger;
-    font-weight: bolder;
-    color: #fff;
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(162, 40, 158),
-    0 0 82px rgb(162, 40, 158),
-    0 0 92px rgb(162, 40, 158),
-    0 0 102px rgb(162, 40, 158),
-    0 0 151px rgb(162, 40, 158);
-}
-
-@keyframes moveBallFirst {
-    0%{
-        transform: rotateZ(0deg);
-        transform-origin: top;
-    }
-    25%{
-        transform: rotateZ(45deg);
-        transform-origin: top;
-    }
-    50%{
-        transform: rotateZ(0deg);
-        transform-origin: top;
-    }
-    100%{
-        transform: rotateZ(0deg);
-        transform-origin: top;
-    }
-}
-@keyframes moveBallLast {
-    0%{
-        transform: rotateZ(0deg);
-        transform-origin: top;
-    }
-    25%{
-        transform: rotateZ(-45deg);
-        transform-origin: top;
-    }
-    50%{
-        transform: rotateZ(0deg);
-        transform-origin: top;
-    }
-    100%{
-        transform: rotateZ(0deg);
-        transform-origin: top;
-    }
+.social-links:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+    text-shadow: 0 0 5px rgb(54, 54, 226);
 }
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:1000px) {
+    
+    
 
-    header{
-        height: 40vh;
-    }
-    .content{
-        height: 40vh;
-        /* flex-wrap: wrap; */
-        /* justify-content: center; */
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .balloons{
-        width: 20vw;
-        height: 20vh;
-        justify-content: center;
-        position:relative;
-        top: -5vh;
-    }
-
-    .balloon .ball{
-        width: 8vw;
-        height: 8vw;
-    }
-    .balloon .thread{
-        width: .7vw;
-        height: 12vw;
-        left: 4vh;
-    }
-    .switch{
-        align-self:end center;
-    }
-
-    .container{
-        height: 100vh;
-        width: 100vw;
-    }
-
-    footer{
+    .datas{
         grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-        height: 100vh;
-        width: 100vw;
+        /* padding-top:400px; */
+        overflow: scroll;
     }
-    footer img{
-        justify-self: center;
-        align-self:center;
-    }
-    footer .selfContent1{
+    .data{
         
-        align-self: center;
-        /* margin-top: 14px; */
     }
-    footer .selfContent2{
-        align-self: center;
+    .image:hover{
+        cursor: pointer;
+        transform: scale(1.7,1.7) translateX(20px);
+        transition: 1s;
     }
-}
 
-@media screen and (max-width:500px) {
-    header{
-        height: 45vh;
+    ul{
+        display: flex;
+        justify-content: center;
     }
-    .content{
-        height: 40vh;
-    }
-    .balloons{
-        top: -3vh
-    }
-    .balloon .ball{
-        font-size: 5vw;
-    }
-    .balloon .thread{
-        height: 15vh;
-        left: 2vh;
+
+    ul li{
+        font-size:100%;
+        list-style-position: inside;
+        margin: 0 2px 2px 2px;
     }
 }
